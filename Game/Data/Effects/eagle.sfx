@@ -1,0 +1,55 @@
+texture framebuffer
+float width
+float height
+
+effect
+{
+   float x = _in.x;
+   float y = _in.y;
+
+   width = 640;
+   height = 480;
+   
+   float zx = 1.0 / width;
+   float zy = 1.0 / height;
+
+   vec4 S = framebuffer(vec2(_in.x - zx, _in.y - zy));
+   vec4 T = framebuffer(vec2(_in.x, _in.y - zy));
+   vec4 U = framebuffer(vec2(_in.x + zx, _in.y - zy));
+
+   vec4 V = framebuffer(vec2(_in.x - zx, _in.y));
+   vec4 C = framebuffer(vec2(_in.x, _in.y));
+   vec4 W = framebuffer(vec2(_in.x + zx, _in.y));
+
+   vec4 X = framebuffer(vec2(_in.x - zx, _in.y + zy));
+   vec4 Y = framebuffer(vec2(_in.x, _in.y + zy));
+   vec4 Z = framebuffer(vec2(_in.x + zx, _in.y + zy));
+
+   // S T U --\  1 2
+   // V C W    > 3 4 
+   // X Y Z --/  
+
+   if(V == S && V == T && S == T) {
+      // 1=S
+      C = S;
+   }
+  
+   if(T == U && T == W && U == W) {
+      // 2=U
+      C = U;
+   }
+
+   if(V == X && V == Y && X == Y) {
+      // 3=X
+      C = X;
+   }
+
+   if(W == Z && W == Y && Z == Y) {
+      // 4=Z
+      C = Z;
+   }
+
+   _out = C;
+   //_out = (C+S+T+U+V+W+X+Y+Z)/9;
+
+} 

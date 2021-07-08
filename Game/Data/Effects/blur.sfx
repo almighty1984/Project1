@@ -1,0 +1,19 @@
+texture framebuffer
+float bloom
+
+effect
+{
+   float x = _in.x;
+   float y = _in.y;
+   
+   float zx = 1.0 / 1024.0;
+   float zy = 1.0 / 768.0;
+
+   vec4 p1 = framebuffer(vec2(_in.x, _in.y));
+   vec4 p2 = framebuffer(vec2(_in.x + zx, _in.y + zy));
+   vec4 p3 = framebuffer(vec2(_in.x - zx, _in.y + zy));
+   vec4 p4 = framebuffer(vec2(_in.x + zx, _in.y - zy));
+   vec4 p5 = framebuffer(vec2(_in.x - zx, _in.y - zy));
+         
+   _out = (p1 + p2 + p3 + p4 + p5) * bloom;
+} 

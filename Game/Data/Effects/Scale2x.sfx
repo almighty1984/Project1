@@ -1,0 +1,38 @@
+texture framebuffer
+
+effect
+{
+   float x = _in.x;
+   float y = _in.y;
+
+   int width = 640;
+   int height = 480;
+   int numIdentical = 0;
+   
+   float zx = 1.0 / width;
+   float zy = 1.0 / height;
+
+   vec4 P = framebuffer(vec2(_in.x, _in.y));
+   vec4 A = framebuffer(vec2(_in.x, _in.y - zy));
+   vec4 B = framebuffer(vec2(_in.x + zx, _in.y));
+   vec4 C = framebuffer(vec2(_in.x - zx, _in.y));
+   vec4 D = framebuffer(vec2(_in.x, _in.y + zy));
+
+   if(A == B)
+      numIdentical += 1;
+   if(A == C)
+      numIdentical += 1;
+   if(A == D)
+      numIdentical += 1;
+   if(B == C)
+      numIdentical += 1;
+   if(B == D)
+      numIdentical += 1;
+   if(C == D)
+      numIdentical += 1;
+
+   if(numIdentical >= 3)
+      A = B = C = D = P;
+
+   _out = (P+A+B+C+D)/5;
+} 

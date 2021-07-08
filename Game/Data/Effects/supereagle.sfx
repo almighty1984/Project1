@@ -1,0 +1,141 @@
+// vec3 dt = vec3(65536.0,255.0,1.0)
+vec4 OGL2Size
+vec4 OGL2InvSize
+texture framebuffer
+
+
+effect
+{
+    
+    // Calculating texel coordinates
+
+    vec2 OGL2Pos = _in.xy*OGL2Size.xy;
+    vec2 fp  = fract(OGL2Pos);
+    vec2 dx  = vec2(OGL2InvSize.x,0.0);
+    vec2 dy  = vec2(0.0,OGL2InvSize.y);
+    vec2 g1  = vec2( OGL2InvSize.x,OGL2InvSize.y);
+    vec2 g2  = vec2(-OGL2InvSize.x,OGL2InvSize.y);
+
+    vec2 pC4 = floor(OGL2Pos)/OGL2Size.xy;
+    vec2 pC8 = pC4 + g1;
+
+
+    // Reading the texels
+
+    vec3 C0 = texture2D(framebuffer,pC4-g1).xyz; 
+    vec3 C1 = texture2D(framebuffer,pC4-dy).xyz;
+    vec3 C2 = texture2D(framebuffer,pC4-g2).xyz;
+    vec3 D3 = texture2D(framebuffer,pC4-g2+dx).xyz;
+    vec3 C3 = texture2D(framebuffer,pC4-dx).xyz;
+    vec3 C4 = texture2D(framebuffer,pC4).xyz;
+    vec3 C5 = texture2D(framebuffer,pC4+dx).xyz;
+    vec3 D4 = texture2D(framebuffer,pC8-g2).xyz;
+    vec3 C6 = texture2D(framebuffer,pC4+g2).xyz;
+    vec3 C7 = texture2D(framebuffer,pC4+dy).xyz;
+    vec3 C8 = texture2D(framebuffer,pC8).xyz;
+    vec3 D5 = texture2D(framebuffer,pC8+dx).xyz;
+    vec3 D0 = texture2D(framebuffer,pC4+g2+dy).xyz;
+    vec3 D1 = texture2D(framebuffer,pC8+g2).xyz;
+    vec3 D2 = texture2D(framebuffer,pC8+dy).xyz;
+    vec3 D6 = texture2D(framebuffer,pC8+g1).xyz;
+
+
+    vec3 p00,p10,p01,p11;
+
+    
+    float c0 = reduce(C0);float c1 = reduce(C1);
+    float c2 = reduce(C2);float c3 = reduce(C3);
+    float c4 = reduce(C4);float c5 = reduce(C5);
+    float c6 = reduce(C6);float c7 = reduce(C7);
+    float c8 = reduce(C8);float d0 = reduce(D0);
+    float d1 = reduce(D1);float d2 = reduce(D2);
+    float d3 = reduce(D3);float d4 = reduce(D4);
+    float d5 = reduce(D5);float d6 = reduce(D6);
+
+
+
+    /*              SuperEagle code               */
+    /*  Copied from the Dosbox source code        */
+    /*  Copyright (C) 2002-2007  The DOSBox Team  */
+    /*  License: GNU-GPL                          */
+    /*  Adapted by guest(r) on 16.4.2007          */
+
+       
+    if (c4 != c8) {
+                if (c7 == c5) {
+                        p01 = p10 = C7;
+                        if ((c6 == c7) || (c5 == c2)) {
+                                p00 = 0.25*(3.0*C7+C4);
+                        } else {
+                                p00 = 0.5*(C4+C5);
+                        }
+
+                        if ((c5 == c4) || (c7 == c1)) {
+                                p11 = 0.25*(3.0*C7+C8);
+                        } else {
+                                p11 = 0.5*(C7+C8);
+                        }
+                } else {
+                        p11 = 0.125*(6.0*C8+C7+C5);
+                        p00 = 0.125*(6.0*C4+C7+C5);
+
+                        p10 = 0.125*(6.0*C7+C4+C8);
+                        p01 = 0.125*(6.0*C5+C4+C8);
+                }
+    } else {
+                if (c7 != c5) {
+                        p11 = p00 = C4;
+
+                        if ((c1 == c4) || (c8 == c5)) {
+                                p01 = 0.25*(3.0*C4+C5);
+                        } else {
+                                p01 = 0.5*(C4+C5);
+                        }
+
+                        if ((c8 == c2) || (c3 == c4)) {
+                                p10 = 0.25*(3.0*C4+C7);
+                        } else {
+                                p10 = 0.5*(C7+C8);
+                        }
+                } else {
+                        float r = 0.0;
+                        r += GET_RESULT(c5,c4,c6,c1);
+                        r += GET_RESULT(c5,c4,c3,c1);
+                        r += GET_RESULT(c5,c4,c2,c5);
+                        r += GET_RESULT(c5,c4,c2,c4);
+
+                        if (r > 0.0) {
+                                p01 = p10 = C7;
+                                p00 = p11 = 0.5*(C4+C5);
+                        } else if (r < 0.0) {
+                                p11 = p00 = C4;
+                                p01 = p10 = 0.5*(C4+C5);
+                        } else {
+                                p11 = p00 = C4;
+                                p01 = p10 = C7;
+                        }
+                }
+    }
+
+
+    // Distributing the final products    
+    
+    if (fp.x < 0.50)
+    { if (fp.y < 0.50) _out.xyz = p00; else _out.xyz = p10;}
+    else
+    { if (fp.y < 0.50) _out.xyz = p01; else _out.xyz = p11;}
+
+}
+
+
+float GET_RESULT(float A, float B, float C, float D)
+{
+    return (sign(abs(A-C)+abs(A-D)) - sign(abs(B-C)+abs(B-D))); 
+}
+
+
+
+float reduce(vec3 color)
+{ 
+    return dot(color,dt);
+}

@@ -1,0 +1,66 @@
+texture framebuffer
+float width
+float height
+
+effect
+{
+   //int numIdentical=0;
+   float x = _in.x;
+   float y = _in.y;
+
+   width = 960;
+   height = 720;
+   
+   float zx = 1.0 / width;
+   float zy = 1.0 / height;
+
+   vec4 A = framebuffer(vec2(_in.x - zx, _in.y - zy));
+   vec4 B = framebuffer(vec2(_in.x, _in.y - zy));
+   vec4 C = framebuffer(vec2(_in.x + zx, _in.y - zy));
+
+   vec4 D = framebuffer(vec2(_in.x - zx, _in.y));
+   vec4 E = framebuffer(vec2(_in.x, _in.y));
+   vec4 F = framebuffer(vec2(_in.x + zx, _in.y));
+
+   vec4 G = framebuffer(vec2(_in.x - zx, _in.y + zy));
+   vec4 H = framebuffer(vec2(_in.x, _in.y + zy));
+   vec4 I = framebuffer(vec2(_in.x + zx, _in.y + zy));
+
+   // A B C --\  1 2 3
+   // D E F    > 4 5 6
+   // G H I --/  7 8 9
+
+   if(D == B && D != H && B != F) {
+      // 1=D
+      E = D;
+   }
+   if( (D == B && D != H && B != F) || (B == F && B != D && F != H && E != A) ) {
+      // 2=B
+      E = B;
+   }
+   if(B == F && B != D && F != H) {
+      // 3=F
+      E = F;
+   }
+   if( (H == D && H != F && D != B && E != A) || (D == B && D != H && B != F && E != G) ) {
+      // 4=D
+      E = D;
+   }
+   if( (B == F && B != D && F != H && E != I) || (F == H && F != B && H != D && E != C) ) {
+      // 3=F
+      E = F;
+   }
+   if(H == D && H != F && D != B) {
+      E = D;
+   }
+   if( (F == H && F != B && H != D && E != G) || (H == D && H != F && D != B && E != I) ) {
+      // 3=F
+      E = H;
+   }
+   if(F == H && F != B && H != D) {
+      E = F;
+   }
+
+   _out = E;
+
+} 

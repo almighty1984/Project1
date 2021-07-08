@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1BB960F0-0D5E-40D5-A035-2A7622101246}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>Roten</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\deps\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-system-d.lib;User32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\deps\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)Project1.exe" game</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>"..\deps\SFML-2.5.1\include"</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>sfml-window.lib;sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;User32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"..\deps\SFML-2.5.1\lib"</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>$(OutDir)\Roten.exe</OutputFile>
+      <ProgramDatabaseFile />
+      <SubSystem>NotSet</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)Roten.exe" game</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Anim.h" />
+    <ClInclude Include="App.h" />
+    <ClInclude Include="BaseObject.h" />
+    <ClInclude Include="EntityPigan.h" />
+    <ClInclude Include="EntityPiganBackState.h" />
+    <ClInclude Include="EntityPiganBounceState.h" />
+    <ClInclude Include="EntityPiganHurtState.h" />
+    <ClInclude Include="EntityPiganWalkState.h" />
+    <ClInclude Include="EntityBall.h" />
+    <ClInclude Include="EntityBrick.h" />
+    <ClInclude Include="EntityBrickDeathState.h" />
+    <ClInclude Include="EntityBrickIdleState.h" />
+    <ClInclude Include="EntityBrickThrownState.h" />
+    <ClInclude Include="EntityFlugan.h" />
+    <ClInclude Include="EntityFluganAttackState.h" />
+    <ClInclude Include="EntityFluganChargeState.h" />
+    <ClInclude Include="EntityFluganDeathState.h" />
+    <ClInclude Include="EntityFluganStunnedState.h" />
+    <ClInclude Include="EntityFluganWalkState.h" />
+    <ClInclude Include="EntityFlyling.h" />
+    <ClInclude Include="EntityFlylingAttackState.h" />
+    <ClInclude Include="EntityFlylingBounceState.h" />
+    <ClInclude Include="EntityFlylingChargeState.h" />
+    <ClInclude Include="EntityFlylingDeathState.h" />
+    <ClInclude Include="EntityFlylingHitState.h" />
+    <ClInclude Include="EntityFlylingFlightState.h" />
+    <ClInclude Include="EntityGrass.h" />
+    <ClInclude Include="EntityGrevert.h" />
+    <ClInclude Include="EntityGrevertAttackState.h" />
+    <ClInclude Include="EntityGrevertDeathState.h" />
+    <ClInclude Include="EntityGrevertHideState.h" />
+    <ClInclude Include="EntityGrevertIdleState.h" />
+    <ClInclude Include="EntityGrodorr.h" />
+    <ClInclude Include="EntityGrodorrAttackState.h" />
+    <ClInclude Include="EntityGrodorrBounceState.h" />
+    <ClInclude Include="EntityGrodorrDeathState.h" />
+    <ClInclude Include="EntityGrodorrIdleState.h" />
+    <ClInclude Include="EntityGrodorrJumpState.h" />
+    <ClInclude Include="EntityGrodorrStunnedState.h" />
+    <ClInclude Include="EntityItem.h" />
+    <ClInclude Include="EntityRain.h" />
+    <ClInclude Include="EntityTrain.h" />
+    <ClInclude Include="EntityTrainIdleState.h" />
+    <ClInclude Include="EntitySnow.h" />
+    <ClInclude Include="EntityState.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelNode.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapsManager.h" />
+    <ClInclude Include="MusicManager.h" />
+    <ClInclude Include="ParticleBrick.h" />
+    <ClInclude Include="ParticleFluganAttack.h" />
+    <ClInclude Include="ParticleGrevertAttack.h" />
+    <ClInclude Include="ParticleGrevertBounce.h" />
+    <ClInclude Include="ParticleOpen.h" />
+    <ClInclude Include="ParticleRain.h" />
+    <ClInclude Include="ParticleSenseAbove.h" />
+    <ClInclude Include="ParticleSenseBelow.h" />
+    <ClInclude Include="ParticleSenseBrick.h" />
+    <ClInclude Include="ParticleSenseFlugan.h" />
+    <ClInclude Include="ParticleSenseGrevert.h" />
+    <ClInclude Include="ParticleSenseGrodorr.h" />
+    <ClInclude Include="ParticleSnow.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="PlayerLedgeState.h" />
+    <ClInclude Include="PlayerWaterJumpState.h" />
+    <ClInclude Include="PlayerMapState.h" />
+    <ClInclude Include="PlayerShopState.h" />
+    <ClInclude Include="PlayerSwingState.h" />
+    <ClInclude Include="ParticleDownthrust.h" />
+    <ClInclude Include="ParticleHealth.h" />
+    <ClInclude Include="ParticleGrodorrAttack.h" />
+    <ClInclude Include="ParticleMelee.h" />
+    <ClInclude Include="ParticleShot.h" />
+    <ClInclude Include="ParticleSense.h" />
+    <ClInclude Include="QuadNode.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SavesManager.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="SoundsManager.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="RenderingManager.h" />
+    <ClInclude Include="SoundBufferManager.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="InitMenuState.h" />
+    <ClInclude Include="InitPlayState.h" />
+    <ClInclude Include="MenuState.h" />
+    <ClInclude Include="PlayState.h" />
+    <ClInclude Include="BitmapFont.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerGrassState.h" />
+    <ClInclude Include="PlayerState.h" />
+    <ClInclude Include="PlayerWaterState.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Anim.cpp" />
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="AppLoad.cpp" />
+    <ClCompile Include="AppRun.cpp" />
+    <ClCompile Include="BaseObject.cpp" />
+    <ClCompile Include="EntityPigan.cpp" />
+    <ClCompile Include="EntityPiganBackState.cpp" />
+    <ClCompile Include="EntityPiganBounceState.cpp" />
+    <ClCompile Include="EntityPiganHurtState.cpp" />
+    <ClCompile Include="EntityPiganWalkState.cpp" />
+    <ClCompile Include="EntityBall.cpp" />
+    <ClCompile Include="EntityBallCollisionCheck.cpp" />
+    <ClCompile Include="EntityBallCollisionReaction.cpp" />
+    <ClCompile Include="EntityBrick.cpp" />
+    <ClCompile Include="EntityBrickDeathState.cpp" />
+    <ClCompile Include="EntityBrickIdleState.cpp" />
+    <ClCompile Include="EntityBrickThrownState.cpp" />
+    <ClCompile Include="EntityCollisionCheckX.cpp" />
+    <ClCompile Include="EntityCollisionCheckY.cpp" />
+    <ClCompile Include="EntityFlugan.cpp" />
+    <ClCompile Include="EntityFluganAttackState.cpp" />
+    <ClCompile Include="EntityFluganChargeState.cpp" />
+    <ClCompile Include="EntityFluganDeathState.cpp" />
+    <ClCompile Include="EntityFluganStunnedState.cpp" />
+    <ClCompile Include="EntityFluganWalkState.cpp" />
+    <ClCompile Include="EntityFlyling.cpp" />
+    <ClCompile Include="EntityFlylingAttackState.cpp" />
+    <ClCompile Include="EntityFlylingBounceState.cpp" />
+    <ClCompile Include="EntityFlylingChargeState.cpp" />
+    <ClCompile Include="EntityFlylingDeathState.cpp" />
+    <ClCompile Include="EntityFlylingHitState.cpp" />
+    <ClCompile Include="EntityFlylingFlightStage.cpp" />
+    <ClCompile Include="EntityGrass.cpp" />
+    <ClCompile Include="EntityGrevert.cpp" />
+    <ClCompile Include="EntityGrevertAttackState.cpp" />
+    <ClCompile Include="EntityGrevertDeathState.cpp" />
+    <ClCompile Include="EntityGrevertHideState.cpp" />
+    <ClCompile Include="EntityGrevertIdleState.cpp" />
+    <ClCompile Include="EntityGrodorr.cpp" />
+    <ClCompile Include="EntityGrodorrAttackState.cpp" />
+    <ClCompile Include="EntityGrodorrBounceState.cpp" />
+    <ClCompile Include="EntityGrodorrDeathState.cpp" />
+    <ClCompile Include="EntityGrodorrIdleState.cpp" />
+    <ClCompile Include="EntityGrodorrJumpState.cpp" />
+    <ClCompile Include="EntityGrodorrStunnedState.cpp" />
+    <ClCompile Include="EntityItem.cpp" />
+    <ClCompile Include="EntityRain.cpp" />
+    <ClCompile Include="EntityState.cpp" />
+    <ClCompile Include="EntityTrain.cpp" />
+    <ClCompile Include="EntityTrainIdleState.cpp" />
+    <ClCompile Include="EntitySnow.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelLoad.cpp" />
+    <ClCompile Include="LevelNode.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapsManager.cpp" />
+    <ClCompile Include="MenuStateMethods.cpp" />
+    <ClCompile Include="MusicManager.cpp" />
+    <ClCompile Include="ParticleBrick.cpp" />
+    <ClCompile Include="ParticleFluganAttack.cpp" />
+    <ClCompile Include="ParticleGrevertAttack.cpp" />
+    <ClCompile Include="ParticleGrevertBounce.cpp" />
+    <ClCompile Include="ParticleOpen.cpp" />
+    <ClCompile Include="ParticleRain.cpp" />
+    <ClCompile Include="ParticleSenseAbove.cpp" />
+    <ClCompile Include="ParticleSenseBelow.cpp" />
+    <ClCompile Include="ParticleSenseBrick.cpp" />
+    <ClCompile Include="ParticleSenseFlugan.cpp" />
+    <ClCompile Include="ParticleSenseGrevert.cpp" />
+    <ClCompile Include="ParticleSenseGrodorr.cpp" />
+    <ClCompile Include="ParticleSnow.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="PlayerCollisionCheckEntityX.cpp" />
+    <ClCompile Include="PlayerCollisionCheckSlopeX.cpp" />
+    <ClCompile Include="PlayerCollisionCheckSlopeY.cpp" />
+    <ClCompile Include="PlayerCollisionCheckY.cpp" />
+    <ClCompile Include="PlayerCollisionCheckEntityY.cpp" />
+    <ClCompile Include="PlayerCollisionCheckX.cpp" />
+    <ClCompile Include="PlayerCollisionReactionEntityX.cpp" />
+    <ClCompile Include="PlayerCollisionReactionSlopeX.cpp" />
+    <ClCompile Include="PlayerCollisionReactionSlopeY.cpp" />
+    <ClCompile Include="PlayerCollisionReactionX.cpp" />
+    <ClCompile Include="PlayerCollisionReactionEntityY.cpp" />
+    <ClCompile Include="PlayerCollisionReactionY.cpp" />
+    <ClCompile Include="PlayerLedgeState.cpp" />
+    <ClCompile Include="PlayerMapState.cpp" />
+    <ClCompile Include="PlayerMethods.cpp" />
+    <ClCompile Include="PlayerShopState.cpp" />
+    <ClCompile Include="PlayerSwingState.cpp" />
+    <ClCompile Include="PlayerWaterJumpState.cpp" />
+    <ClCompile Include="PlayStateMethods.cpp" />
+    <ClCompile Include="ParticleDownthrust.cpp" />
+    <ClCompile Include="ParticleHealth.cpp" />
+    <ClCompile Include="ParticleGrodorrAttack.cpp" />
+    <ClCompile Include="ParticleMelee.cpp" />
+    <ClCompile Include="ParticleShot.cpp" />
+    <ClCompile Include="ParticleSense.cpp" />
+    <ClCompile Include="QuadNode.cpp" />
+    <ClCompile Include="SavesManager.cpp" />
+    <ClCompile Include="SavesManagerAdd.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SoundsManager.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="RenderingManager.cpp" />
+    <ClCompile Include="SoundBufferManager.cpp" />
+    <ClCompile Include="InitMenuState.cpp" />
+    <ClCompile Include="InitPlayState.cpp" />
+    <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="PlayState.cpp" />
+    <ClCompile Include="BitmapFont.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerGrassState.cpp" />
+    <ClCompile Include="PlayerWaterState.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project1.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

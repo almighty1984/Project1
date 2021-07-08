@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{80fbbf63-49b7-4e65-9ec3-19dbc80f0bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameStates">
+      <UniqueIdentifier>{2ea079fa-acbd-4595-ba21-f16d04e02a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{6021f0d7-0d54-4413-9dc6-a712a0f08782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Player">
+      <UniqueIdentifier>{5cfc59eb-c29d-4cf2-aed3-222521e00ef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Objects\Player\PlayerStates">
+      <UniqueIdentifier>{677d0132-2f2e-487f-a7a4-3c0bb0d598e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameStates">
+      <UniqueIdentifier>{a2fa8b3f-d584-44ca-9c0f-472f2116a269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{412f90ab-d230-4713-8c58-cb9bd3f2b4fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{e27b49c9-b5ea-438c-9020-d23e958af823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Player">
+      <UniqueIdentifier>{602f6b8c-1ed5-4028-b0a2-67083906bfa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Player\PlayerStates">
+      <UniqueIdentifier>{81285c26-c300-4962-881e-498f618e5a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities">
+      <UniqueIdentifier>{df66ab55-0bce-4ee6-8e75-ff9d0d219778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityFlugan">
+      <UniqueIdentifier>{4f90d055-89ee-4e14-8ab6-29ac91f1375a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityFlyling">
+      <UniqueIdentifier>{21eef5ac-3eb3-442a-8880-4de63b2b4cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities">
+      <UniqueIdentifier>{1944a572-5e3b-4fa6-bcf6-2160da2b2051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityFlugan">
+      <UniqueIdentifier>{a2c50ecd-0b04-46e1-852b-1e306c6cdff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityFlyling">
+      <UniqueIdentifier>{e88e4e55-1fe3-4739-a1a5-817186224485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityGrodorr">
+      <UniqueIdentifier>{8fbbfa7c-3916-49f6-a7c3-048270f5b609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityGrodorr">
+      <UniqueIdentifier>{3e3752d5-f412-4159-9c23-9b7f63782934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityBall">
+      <UniqueIdentifier>{ee6def4d-88ea-48db-92f6-b1fcb76994b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityBall">
+      <UniqueIdentifier>{9b00aabb-bc74-449a-95f1-5d53defe2211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Particles">
+      <UniqueIdentifier>{889af6fd-1e92-4177-9c9e-4356cf98c076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Particles">
+      <UniqueIdentifier>{f871a18d-cbf6-43b0-8021-b84520f2f438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityTrain">
+      <UniqueIdentifier>{b524154e-3cec-4c09-9b24-11ea48c3184d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityTrain">
+      <UniqueIdentifier>{405cf8c1-3484-4444-a028-4ed375adfb67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityBrick">
+      <UniqueIdentifier>{8c02d348-1bde-4434-9dbf-285d0e1ab8c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityBrick">
+      <UniqueIdentifier>{47446d4c-0ce4-4796-8480-5650d9958b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Player\PlayerCollision">
+      <UniqueIdentifier>{5c7ee91b-ff44-4b15-95e1-00c8747f8732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Particles\ParticleSense">
+      <UniqueIdentifier>{d754a322-25de-4c63-bcee-32caa4f11632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Particles\ParticleSense">
+      <UniqueIdentifier>{dcf17b9f-ea2c-4bd7-9b4e-a46cec2d31e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityPigan">
+      <UniqueIdentifier>{22f42063-5af1-40f0-9c10-8f65e3a3a73d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityPigan">
+      <UniqueIdentifier>{ad5fda1d-7b12-40ed-beb0-1619ba7165e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Entities\EntityGrevert">
+      <UniqueIdentifier>{f1279ad4-179b-4b27-b00f-c119e59f50d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Entities\EntityGrevert">
+      <UniqueIdentifier>{b8e03be0-bb4a-49d2-bbbe-4c57a6614aae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundBufferManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="InitMenuState.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="InitPlayState.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>Header Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapFont.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SavesManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundsManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="MapsManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerGrassState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerWaterState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMapState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerShopState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSwingState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlugan.h">
+      <Filter>Header Files\Objects\Entities\EntityFlugan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFluganAttackState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlugan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFluganChargeState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlugan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFluganWalkState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlugan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlyling.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlylingAttackState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlylingBounceState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlylingChargeState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlylingFlightState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Objects\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityItem.h">
+      <Filter>Header Files\Objects\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorr.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorrIdleState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorrAttackState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorrJumpState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityBall.h">
+      <Filter>Header Files\Objects\Entities\EntityBall</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorrDeathState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorrBounceState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFluganDeathState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlugan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlylingHitState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFlylingDeathState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlyling</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFluganStunnedState.h">
+      <Filter>Header Files\Objects\Entities\EntityFlugan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrodorrStunnedState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySnow.h">
+      <Filter>Header Files\Objects\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleDownthrust.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleGrodorrAttack.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleHealth.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleMelee.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityRain.h">
+      <Filter>Header Files\Objects\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityTrain.h">
+      <Filter>Header Files\Objects\Entities\EntityTrain</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityTrainIdleState.h">
+      <Filter>Header Files\Objects\Entities\EntityTrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerWaterJumpState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSnow.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityBrick.h">
+      <Filter>Header Files\Objects\Entities\EntityBrick</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityBrickIdleState.h">
+      <Filter>Header Files\Objects\Entities\EntityBrick</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityBrickDeathState.h">
+      <Filter>Header Files\Objects\Entities\EntityBrick</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleOpen.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityState.h">
+      <Filter>Header Files\Objects\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>Header Files\Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleFluganAttack.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleBrick.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleRain.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityBrickThrownState.h">
+      <Filter>Header Files\Objects\Entities\EntityBrick</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrass.h">
+      <Filter>Header Files\Objects\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSense.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSenseAbove.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSenseBrick.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSenseFlugan.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSenseGrevert.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSenseGrodorr.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPigan.h">
+      <Filter>Header Files\Objects\Entities\EntityPigan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPiganWalkState.h">
+      <Filter>Header Files\Objects\Entities\EntityPigan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPiganBackState.h">
+      <Filter>Header Files\Objects\Entities\EntityPigan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPiganHurtState.h">
+      <Filter>Header Files\Objects\Entities\EntityPigan</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrevert.h">
+      <Filter>Header Files\Objects\Entities\EntityGrevert</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrevertAttackState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrevert</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrevertDeathState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrevert</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrevertHideState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrevert</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityGrevertIdleState.h">
+      <Filter>Header Files\Objects\Entities\EntityGrevert</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPiganBounceState.h">
+      <Filter>Header Files\Objects\Entities\EntityPigan</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerLedgeState.h">
+      <Filter>Header Files\Objects\Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleShot.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSenseBelow.h">
+      <Filter>Header Files\Objects\Particles\ParticleSense</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleGrevertAttack.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleGrevertBounce.h">
+      <Filter>Header Files\Objects\Particles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundBufferManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="InitMenuState.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="InitPlayState.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapFont.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundsManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SavesManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="MapsManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSwingState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMapState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerShopState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerWaterState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerGrassState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMethods.cpp">
+      <Filter>Source Files\Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelLoad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlugan.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlugan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFluganAttackState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlugan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFluganChargeState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlugan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFluganWalkState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlugan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlyling.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlylingAttackState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlylingBounceState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlylingChargeState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlylingFlightStage.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityItem.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorr.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorrIdleState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorrAttackState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorrJumpState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBall.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBall</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBallCollisionReaction.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBall</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBallCollisionCheck.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBall</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorrDeathState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorrBounceState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFluganDeathState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlugan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlylingHitState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFlylingDeathState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlyling</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="SavesManagerAdd.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuStateMethods.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFluganStunnedState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityFlugan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrodorrStunnedState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrodorr</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySnow.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleDownthrust.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleGrodorrAttack.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleHealth.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleMelee.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityRain.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityTrain.cpp">
+      <Filter>Source Files\Objects\Entities\EntityTrain</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityTrainIdleState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityTrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayStateMethods.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerWaterJumpState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSnow.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBrick.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBrick</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBrickIdleState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBrick</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBrickDeathState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBrick</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleOpen.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleFluganAttack.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleBrick.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleRain.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppLoad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppRun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityBrickThrownState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityBrick</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionCheckEntityX.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionCheckEntityY.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionCheckX.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionCheckY.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionReactionEntityX.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionReactionEntityY.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionReactionX.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionReactionY.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionReactionSlopeY.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionReactionSlopeX.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionCheckSlopeX.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionCheckSlopeY.cpp">
+      <Filter>Source Files\Objects\Player\PlayerCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityCollisionCheckY.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityCollisionCheckX.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrass.cpp">
+      <Filter>Source Files\Objects\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSense.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSenseAbove.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSenseBrick.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSenseFlugan.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSenseGrevert.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSenseGrodorr.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPigan.cpp">
+      <Filter>Source Files\Objects\Entities\EntityPigan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPiganWalkState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityPigan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPiganBackState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityPigan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPiganHurtState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityPigan</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrevert.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrevert</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrevertAttackState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrevert</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrevertDeathState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrevert</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrevertIdleState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrevert</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityGrevertHideState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityGrevert</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPiganBounceState.cpp">
+      <Filter>Source Files\Objects\Entities\EntityPigan</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerLedgeState.cpp">
+      <Filter>Source Files\Objects\Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Anim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleShot.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSenseBelow.cpp">
+      <Filter>Source Files\Objects\Particles\ParticleSense</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleGrevertAttack.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleGrevertBounce.cpp">
+      <Filter>Source Files\Objects\Particles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project1.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
